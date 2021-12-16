@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    	{% for animal in persona_list %}
+    	    <h2> {{ animal.nombre }} <b>{{ animal.raza }}</b> </h2>
+    	    <p> {{ animal.nacimiento }} </p>
+            {% if animal.edad %}
+             <p> {{ animal.edad}} </p>
+             {% endif %} 
+           <div>
+            {% if animal.foto %}
+                <img src="{{ animal.foto.url }}" alt="{{ animal.nombre }} {{animal.raza}}">
+                {% endif %} 
+            </div>
+        {% endfor %}
+    </body>
+</html> 
